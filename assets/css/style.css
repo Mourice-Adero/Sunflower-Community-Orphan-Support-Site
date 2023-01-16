@@ -44,7 +44,8 @@ btn-
 
 .navbar-top {
   background: #0f6d07;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: bold;
   padding: 3px 0;
 }
 .navbar-top .list-inline {
@@ -61,9 +62,28 @@ btn-
   margin-bottom: 0;
   color: rgb(255, 255, 255);
   background: #e3bb1c;
+  position: relative;
+  z-index: 20;
+}
+.navbar-main .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #e3bb1c54;
+}
+.navbar-main .container {
+  position: relative;
+  z-index: 100;
 }
 .navbar-main .navbar-brand {
   border-bottom: none !important;
+}
+.navbar-main {
+  background: url(../images/logo-icon.png) no-repeat;
+  background-size: contain;
 }
 .navbar-main a:hover,
 .navbar-main a:active,
@@ -112,7 +132,8 @@ btn-
   border-bottom: 2px solid transparent;
 }
 .navbar-main li a {
-  color: rgb(250, 225, 2);
+  color: #1f1812;
+  font-weight: 700;
 }
 .navbar-main li:hover .submenu {
   top: 62px;
@@ -129,8 +150,14 @@ btn-
 
 /* Home Slider 
 ================================= */
-.carousel-home img {
+.carousel-home .carousel-inner .item {
   width: 100%;
+  height: 60vh;
+}
+.carousel-home .carousel-inner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .carousel-home .carousel-control {
   background: rgb(250, 225, 2);
@@ -197,7 +224,7 @@ btn-
 }
 .about-us-col .col-title {
   text-transform: uppercase;
-  color:#1f1812;
+  color: #1f1812;
 }
 .about-us-col .col-details p {
   text-align: justify;
@@ -215,9 +242,12 @@ btn-
 .reasons-col {
   position: relative;
   overflow: hidden;
+  height: 85vh;
 }
 .reasons-col img {
+  object-fit: cover;
   width: 100%;
+  height: 100%;
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   -webkit-transition: all, 0.5s;
@@ -330,7 +360,7 @@ btn-
 
 .main-footer {
   background: #e3bb1c;
-  color: #8b5e3c;
+  color: #333;
 }
 .main-footer .footer-main {
   padding: 30px 0;
@@ -338,15 +368,16 @@ btn-
 .main-footer .footer-title {
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-weight: 900;
 }
 .main-footer .footer-title .title-under {
-  background: #fff;
+  background: #0f6d07;
   margin: 15px 0;
   text-align: left;
 }
 .main-footer .footer-title .title-under:after {
   margin: 0;
-  background: #fff;
+  background: #0f6d07;
 }
 .main-footer .footer-content {
   text-align: justify;
@@ -356,11 +387,11 @@ btn-
   font-size: 3rem;
   padding: 0.5rem;
   margin: 5px;
-  border: 1px solid rgb(250, 225, 2);
   border-radius: 50%;
 }
 .main-footer .footer-content li a:hover {
-  color: rgb(250, 225, 2);
+  border: 1px solid #0f6d07;
+  color: #0f6d07
 }
 .main-footer .tweet {
   font-size: 13px;
@@ -379,8 +410,10 @@ btn-
 
 .footer-bottom {
   background: #0f6d07;
-  padding: 3px;
+  padding: 5px;
   color: #1f1812;
+  font-weight: 700;
+  font-size: large;
 }
 
 .footer-form .form-group {
@@ -428,19 +461,26 @@ btn-
 /* Pages 
 ================================= */
 .page-heading {
-  background: url(../images/heading-gb-1.jpg);
+  background-color: #8b5e3c;
+  background: url(https://scontent.fnbo13-1.fna.fbcdn.net/v/t39.30808-6/308979490_430027232590931_3819109414498226432_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=PCMoxsvhbbsAX_0H9Is&_nc_zt=23&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfAiQoOl15HkqGN8tc9h50Pgq-cE6156bcSkOWWrRH4t1w&oe=63CAC88A);
   background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
   min-height: 190px;
   color: #fff;
   padding: 25px 15px;
   margin-bottom: 50px;
 }
+.page-heading .page-title {
+  color: #fff;
+}
 .page-heading .title-under {
-  background: #fff;
+  background: #e3bb1c;
 }
 
 .page-description {
   font-size: 18px;
+  color: #e3bb1c;
 }
 
 .main-container {
@@ -504,7 +544,7 @@ form .alert {
 	Module
 ========================================================================== */
 .btn-primary {
-  background: #0f6d07;
+  background: linear-gradient(90deg, #fdb713ad, #8b5e3c9a);
   border: none;
   border-radius: 0;
   padding: 10px 25px;
@@ -521,7 +561,7 @@ form .alert {
 }
 
 .btn-secondary {
-  background: #0f6d07;
+  background: linear-gradient(90deg, #fdb713ad, #8b5e3c9a);
   color: #1f1812;
   border-radius: 0;
 }
