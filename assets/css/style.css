@@ -196,6 +196,7 @@ btn-
 }
 .carousel-home .btn {
   margin-top: 30px;
+  background: #ccc;
 }
 .carousel-home .btn:hover {
   color: rgb(250, 225, 2);
