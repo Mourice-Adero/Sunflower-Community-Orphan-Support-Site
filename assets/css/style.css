@@ -469,8 +469,18 @@ btn-
   background-repeat: no-repeat;
   min-height: 190px;
   color: #fff;
-  padding: 25px 15px;
+  padding: auto;
+  padding-top: 25px;
   margin-bottom: 50px;
+  position: relative;
+}
+.page-heading-overlay {
+  position: absolute;
+  top: 0;
+  height: 0;
+  height: 100%;
+  width: 100%;
+  background: #1f18129f;
 }
 .page-heading .page-title {
   color: #fff;

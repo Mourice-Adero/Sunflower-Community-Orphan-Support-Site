@@ -1,0 +1,83 @@
+.main-container {
+    display: flex;
+}
+.sidebar {
+    padding: 1.5rem;
+    width: 25vw;
+    background: #1f1812;
+    background: rgb(69, 158, 69);
+    color: #ffffff;
+    transition: all 0.3s;
+    box-shadow: 0 0 3px 0px rgb(0 0 0 / 40%);
+    min-height: 100vh;
+}
+
+.nav-tabs li{
+    width: 100%;
+}
+.nav-tabs li .nav-link {
+    color: #ffffff;
+    border: none;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+.nav-tabs li a:hover {
+    border: none;
+    background: #ffffff;
+    color: black;
+}
+.right-content  {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #fdb713ad, #8b5e3c9a);
+}
+.right-content .nav-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+}
+
+
+.login-page .left {
+    background: url(../../admin/images/africa-education.jpg);
+    height: 100vh;
+    width: 50vw;
+    color: rgb(69, 158, 69);
+    position: relative;
+    z-index: 100;
+}
+.login-page .left .left-overlay {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: #1f1812cb;
+}
+form button {
+    background: rgb(69, 158, 69);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #e3bb1c;
+}
+.login-page .right {
+    height: 100vh;
+}
+.login-page .fa-user-circle {
+    color: #e3bb1c;
+    font-size: 3rem;
+}
+.login-page .fab {
+    color: #e3bb1c;
+}
+.login-page .fab:hover {
+    color: rgb(69, 158, 69);
+}
+.login-page form input,
+.login-page form button {
+    border: 1px solid #1f1812;
+}
+.login-page .small-logo {
+    height: 10rem;
+}
