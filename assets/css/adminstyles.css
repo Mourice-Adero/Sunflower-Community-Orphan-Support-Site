@@ -81,3 +81,10 @@ form button {
 .login-page .small-logo {
     height: 10rem;
 }
+
+@media (min-width: 576px) {
+    .sidebar {
+        min-width: 400px;
+    }
+    
+}
