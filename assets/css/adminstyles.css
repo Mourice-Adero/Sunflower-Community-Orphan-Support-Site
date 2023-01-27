@@ -2,9 +2,6 @@
     display: flex;
 }
 .sidebar {
-    padding: 1.5rem;
-    width: 25vw;
-    background: #1f1812;
     background: rgb(69, 158, 69);
     color: #ffffff;
     transition: all 0.3s;
@@ -28,7 +25,6 @@
 }
 .right-content  {
     position: relative;
-    width: 100%;
     min-height: 100vh;
     background: linear-gradient(90deg, #fdb713ad, #8b5e3c9a);
 }
@@ -82,9 +78,13 @@ form button {
     height: 10rem;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 768px) {
+    .main-container {
+        display: block;
+    }
     .sidebar {
-        min-width: 400px;
+        width: 100vw;
+        display: flex;
     }
     
 }
