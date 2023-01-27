@@ -1,85 +1,123 @@
-.sidebar {
-    background: rgb(69, 158, 69);
-    color: #ffffff;
-    transition: all 0.3s;
-    box-shadow: 0 0 3px 0px rgb(0 0 0 / 40%);
-    min-height: 100vh;
-}
-
-.nav-tabs li{
-    width: 100%;
-}
-.nav-tabs li .nav-link {
-    color: #ffffff;
-    border: none;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-}
-.nav-tabs li a:hover {
-    border: none;
-    background: #ffffff;
-    color: black;
-}
-.right-content  {
-    position: relative;
-    min-height: 100vh;
+.row {
     background: linear-gradient(90deg, #fdb713ad, #8b5e3c9a);
 }
-.right-content .nav-toggle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: visible;
+.sidebar {
+  background: rgb(69, 158, 69);
+  color: #ffffff;
+  transition: all 0.3s;
+  box-shadow: 0 0 3px 0px rgb(0 0 0 / 40%);
+  min-height: 100vh;
 }
 
+.nav-tabs li {
+  width: 100%;
+}
+.nav-tabs li .nav-link {
+  color: #ffffff;
+  border: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+.nav-tabs li a:hover {
+  border: none;
+  background: #ffffff;
+  color: #1f1812;
+}
+.right-content {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #fdb713ad, #8b5e3c9a);
+}
+.right-content .right-header {
+    background: #20191391;
+}
+.col-lg-10, .col-sm-12 {
+    margin: 0;
+    padding: 0;
+}
+.right-content .nav-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+.admin-name {
+  color: #e3bb1c;
+}
+.avatar {
+    height: 50px;
+}
+.hr {
+  border-top: 2px solid #e3bb1c;
+  height: 5px;
+}
+.nav-link i {
+  color: #e3bb1c;
+}
+.card {
+    background: #20191391;
+}
+.card i {
+    color: #e3bb1c;
+    font-size: 2rem;
+}
+.btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: none;
+}
 
 .login-page .left {
-    background: url(../../admin/images/africa-education.jpg);
-    height: 100vh;
-    width: 50vw;
-    color: rgb(69, 158, 69);
-    position: relative;
-    z-index: 100;
+  background: url(../../admin/images/africa-education.jpg);
+  height: 100vh;
+  width: 50vw;
+  color: rgb(69, 158, 69);
+  position: relative;
+  z-index: 100;
 }
 .login-page .left .left-overlay {
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    background: #1f1812cb;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: #1f1812cb;
 }
 form button {
-    background: rgb(69, 158, 69);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #e3bb1c;
+  background: rgb(69, 158, 69);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #e3bb1c;
 }
 .login-page .right {
-    height: 100vh;
+  height: 100vh;
 }
 .login-page .fa-user-circle {
-    color: #e3bb1c;
-    font-size: 3rem;
+  color: #e3bb1c;
+  font-size: 3rem;
 }
 .login-page .fab {
-    color: #e3bb1c;
+  color: #e3bb1c;
 }
 .login-page .fab:hover {
-    color: rgb(69, 158, 69);
+  color: rgb(69, 158, 69);
 }
 .login-page form input,
 .login-page form button {
-    border: 1px solid #1f1812;
+  border: 1px solid #1f1812;
 }
 .login-page .small-logo {
-    height: 10rem;
+  height: 10rem;
 }
 
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100vw;
-        display: block;
-        height: 50vh;
-    }
-    
+  .sidebar {
+    width: 100vw;
+    display: block;
+    height: 50vh;
+  }
+  .right-content {
+    width: 100vw;
+  }
 }

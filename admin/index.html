@@ -54,18 +54,18 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="../assets/css/adminstyles.css" />
     <script src="../assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/adminstyles.css" />
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
         <div
-          class="col-lg-3 sidebar d-lg-block collapse navbar-colapse position-relative"
+          class="col-lg-2 sidebar d-lg-block collapse navbar-colapse position-relative"
           id="sidebar-content"
         >
           <div
-            class="navbar-toggler m-3 p-2 h1 d-lg-none border position-absolute end-0 top-0"
+            class="navbar-toggler m-3 p-2 h1 d-lg-none border position-absolute end-2 top-0"
             data-bs-toggle="collapse"
             data-bs-target="#sidebar-content"
             aria-controls="sidebar-content"
@@ -74,16 +74,20 @@
           >
             <i class="fa fa-bars" aria-hidden="true"></i>
           </div>
-          <div class="admin-details mx-auto">
+          <div
+            class="admin-details d-flex flex-column justify-content-center pt-3 text-center"
+          >
             <img
               src="./images/admin-avatar.jpg"
-              class="rounded-circle image-fluid image-thumbnail"
+              class="rounded-circle image-fluid image-thumbnail m-auto"
               style="height: 100px"
               alt="Admin Avatar"
             />
-            <h4 class="">Admin</h4>
+            <h4 class="m-2 admin-name">Admin</h4>
           </div>
-          <h3 class="my-4">Dashboard</h3>
+          <hr class="hr" />
+          <h3 class="my-4 text-center">Dashboard</h3>
+          <hr class="hr" />
           <ul class="nav nav-tabs flex-column">
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#admins"
@@ -113,21 +117,22 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#contacts"
+              <a class="nav-link" data-toggle="tab" href="#blog"
                 ><i class="fa fa-rss px-2" aria-hidden="true"></i> Blog</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#blog"
-                ><i class="fa fa-th px-2" aria-hidden="true"></i> Gallary</a
+              <a class="nav-link" data-toggle="tab" href="#gallery"
+                ><i class="fa fa-th px-2 mb-2" aria-hidden="true"></i>
+                Gallary</a
               >
             </li>
           </ul>
         </div>
-        <div class="col-lg-9 right-content shadow-sm">
-          <div class="d-flex justify-content-between">
+        <div class="col-sm-12 col-lg-10 right-content shadow-sm">
+          <div class="d-flex justify-content-between right-header">
             <div
-              class="navbar-toggler m-auto p-2 h1 border d-lg-none"
+              class="navbar-toggler m-auto p-2 h1 border d-lg-none btn-show-nav"
               data-bs-toggle="collapse"
               data-bs-target="#sidebar-content"
               aria-controls="sidebar-content"
@@ -136,19 +141,32 @@
             >
               <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-            <h2 class="p-2">Sunflower Community Orphan Support</h2>
-            <div class="admin-details bg-success p-2 d-flex align-items-center">
-              <div class="admin-icons">
-                <i class="fa fa-bell" aria-hidden="true"></i>
-              </div>
-              <img src="#" alt="admin-avatar" />
-              <button class="p-2 border-0">LogOut</button>
+            <h2 class="p-2 mx-auto text-white">
+              Sunflower Community Orphan Support
+            </h2>
+            <div
+              class="profile-container d-flex align-items-center"
+              style="background-color: rgb(69, 158, 69)"
+            >
+              <img
+                src="./images/admin-avatar.jpg"
+                class="image-fluid image-thumbnail avatar rounded-circle mx-2"
+              />
+              <button
+                class="btn btn-outline-secondary d-none d-sm-inline-block text-dark mx-2"
+              >
+                Log Out
+              </button>
+              <i
+                class="fas fa-sign-out d-sm-none mr-2"
+                style="color: #1f1812"
+              ></i>
             </div>
           </div>
-          <div class="dashboard-body d-flex flex-wrap gap-5">
+          <div class="dashboard-body d-flex flex-wrap gap-3 mt-4">
             <div
-              class="card text-white text-center bg-primary mb-3"
-              style="min-width: 18rem"
+              class="card text-white text-center mx-auto m-3"
+              style="min-width: 12rem"
             >
               <div class="card-header">Admis</div>
               <div class="card-body">
@@ -159,8 +177,8 @@
               </div>
             </div>
             <div
-              class="card text-white text-center bg-primary mb-3"
-              style="min-width: 18rem"
+              class="card text-white text-center mx-auto m-3"
+              style="min-width: 12rem"
             >
               <div class="card-header">Sponsers</div>
               <div class="card-body">
@@ -171,8 +189,8 @@
               </div>
             </div>
             <div
-              class="card text-white text-center bg-primary mb-3"
-              style="min-width: 18rem"
+              class="card text-white text-center mx-auto m-3"
+              style="min-width: 12rem"
             >
               <div class="card-header">Donations</div>
               <div class="card-body">
@@ -186,60 +204,52 @@
           <div class="tab-content">
             <div class="tab-pane" id="admins">
               <div
-                class="content-head d-flex justify-content-between mb-3"
+                class="content-head d-flex justify-content-between mx-3"
                 id="admins-content"
               >
                 <h3>Admins</h3>
                 <button class="">Add Admin</button>
               </div>
               <div class="content-data">
-                <table class="w-100 h-100">
+                <table class="table">
                   <thead>
-                    <th>ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Update</th>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                    </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>John</td>
-                      <td>Doe</td>
-                      <td>johndoe@gmail.com</td>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
                       <td>
-                        <button class="mx-2">Edit</button
-                        ><button>Update</button>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
                       </td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td>John</td>
-                      <td>Doe</td>
-                      <td>johndoe@gmail.com</td>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
                       <td>
-                        <button class="mx-2">Edit</button
-                        ><button>Update</button>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
                       </td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td>John</td>
-                      <td>Doe</td>
-                      <td>johndoe@gmail.com</td>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
                       <td>
-                        <button class="mx-2">Edit</button
-                        ><button>Update</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>John</td>
-                      <td>Doe</td>
-                      <td>johndoe@gmail.com</td>
-                      <td>
-                        <button class="mx-2">Edit</button
-                        ><button>Update</button>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
                       </td>
                     </tr>
                   </tbody>
@@ -248,76 +258,52 @@
             </div>
             <div class="tab-pane" id="messages">
               <div
-                class="content-head d-flex justify-content-between mb-3"
+                class="content-head d-flex justify-content-between mx-3"
                 id="messages-content"
               >
                 <h3>Messages</h3>
                 <button class="">Delete All</button>
               </div>
               <div class="content-data">
-                <table class="w-100 h-100">
+                <table class="table">
                   <thead>
-                    <th>Number</th>
-                    <th>Name</th>
-                    <th>Message</th>
-                    <th>Email</th>
-                    <th>Action</th>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                    </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>John</td>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
                       <td>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Ullam iure quis nemo consequuntur, excepturi earum
-                        totam qui molestiae? Totam, iste.
-                      </td>
-                      <td>johndoe@gmail.com</td>
-                      <td>
-                        <button class="m-auto">Reply</button
-                        ><button>Delete</button>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
                       </td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td>John</td>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
                       <td>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Ullam iure quis nemo consequuntur, excepturi earum
-                        totam qui molestiae? Totam, iste.
-                      </td>
-                      <td>johndoe@gmail.com</td>
-                      <td>
-                        <button class="m-auto">Reply</button
-                        ><button>Delete</button>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
                       </td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td>John</td>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
                       <td>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Ullam iure quis nemo consequuntur, excepturi earum
-                        totam qui molestiae? Totam, iste.
-                      </td>
-                      <td>johndoe@gmail.com</td>
-                      <td>
-                        <button class="m-auto">Reply</button
-                        ><button>Delete</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>John</td>
-                      <td>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Ullam iure quis nemo consequuntur, excepturi earum
-                        totam qui molestiae? Totam, iste.
-                      </td>
-                      <td>johndoe@gmail.com</td>
-                      <td>
-                        <button class="m-auto">Reply</button
-                        ><button>Delete</button>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
                       </td>
                     </tr>
                   </tbody>
@@ -325,47 +311,306 @@
               </div>
             </div>
             <div class="tab-pane" id="donations">
-              <!-- Donations content here -->
-              donations
+              <div
+                class="content-head d-flex justify-content-between mx-3"
+                id="messages-content"
+              >
+                <h3>Donations</h3>
+                <button class="">Delete All</button>
+              </div>
+              <div class="content-data">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="tab-pane" id="sponsors">
-              <!-- Sponsors content here -->
-              sponsers-body
+              <div
+                class="content-head d-flex justify-content-between mx-3"
+                id="messages-content"
+              >
+                <h3>Sponsers</h3>
+              </div>
+              <div class="content-data">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td>
+                        <button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="tab-pane" id="contacts">
-              <!-- Contacts content here -->
-              contacts
+              <div
+                class="content-head d-flex justify-content-between mx-3"
+                id="messages-content"
+              >
+                <h3>Contacts</h3>
+                <button class="">Delete All</button>
+              </div>
+              <div class="content-data">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="tab-pane" id="blog">
-              <!-- Blog content here -->
-              blog
+              <div
+                class="content-head d-flex justify-content-between mx-3"
+                id="messages-content"
+              >
+                <h3>Blog Content</h3>
+                <button class="">Delete All</button>
+              </div>
+              <div class="content-data">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane" id="gallery">
+              <div
+                class="content-head d-flex justify-content-between mx-3"
+                id="messages-content"
+              >
+                <h3>Gallery</h3>
+                <button class="">Delete All</button>
+              </div>
+              <div class="content-data">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>mark@mdo</td>
+                      <td><button class="btn btn-success btn-sm">Update</button>
+                        <button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- scroll up -->
+    <button class="btn btn-warning btn-top" id="scroll-top-btn">Top</button>
   </body>
 
   <!-- scroll listener -->
-  <script>const listItems = document.querySelectorAll('.nav-link');
-    const contents = document.querySelectorAll('.tab-pane');
-    
-    listItems.forEach((item) => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            // remove active class from all list items
-            listItems.forEach((i) => i.classList.remove('active'));
-            // add active class to the clicked list item
-            item.classList.add('active');
-            // hide all contents
-            contents.forEach((content) => content.classList.remove('d-block'));
-            // show the corresponding content
-            const id = item.getAttribute('href');
-            const content = document.querySelector(id);
-            content.classList.add('d-block');
-            // scroll the content into view
-            content.scrollIntoView({ behavior: 'smooth' });
-        });
+  <script>
+    const button = document.getElementById("scroll-top-btn");
+    button.addEventListener("click", () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
     });
-    </script>
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 0) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    });
+
+    const listItems = document.querySelectorAll(".nav-link");
+    const contents = document.querySelectorAll(".tab-pane");
+    // const container = document.querySelector(".sidebar");
+
+    listItems.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        // remove active class from all list items
+        listItems.forEach((i) => i.classList.remove("active"));
+        // add active class to the clicked list item
+        item.classList.add("active");
+        // hide all contents
+        contents.forEach((content) => content.classList.remove("d-block"));
+        // show the corresponding content
+        const id = item.getAttribute("href");
+        const content = document.querySelector(id);
+        content.classList.add("d-block");
+        // scroll the content into view
+        content.scrollIntoView({ behavior: "smooth" });
+        //display sidebar none
+        // container.classList.add("d-none");
+      });
+    });
+  </script>
 </html>
