@@ -125,7 +125,7 @@ function test_input($data)
               <p>Don't have an account? </p> <a href="./register.php" id="register">Register Here</a>
             </div>
           </form>
-          <div class="social-media m-auto d-lg-none">
+          <div class="social-media m-auto d-lg-none mb-3">
             <ul class="list-unstyled d-flex gap-4 my-auto">
               <li>
                 <a href="#"><i class="fab fa-facebook p-2 fs-4" aria-hidden="true"></i></a>
