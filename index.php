@@ -1,110 +1,13 @@
-<!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <title>Sunflower Community Orphans Support Project</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Fonts -->
-    <link
-      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="http://fonts.googleapis.com/css?family=Dosis:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
-
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <script src="assets/js/modernizr-2.6.2.min.js"></script>
-  </head>
-
-  <body>
-    <header class="main-header">
-      <nav class="navbar navbar-static-top">
-        <div class="navbar-top">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-xs-12">
-                <ul class="list-unstyled list-inline header-contact">
-                  <li>
-                    <i class="fa fa-phone"></i>
-                    <a href="tel:">+25412345678 </a>
-                  </li>
-                  <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:cokendo2000@gmail.com"
-                      >cokendo2000@gmail.com</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-sm-6 col-xs-12 text-right">
-                <ul class="list-unstyled list-inline header-social">
-                  <li>
-                    <a href="#"> <i class="fa fa-facebook"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#"> <i class="fa fa-twitter"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#"> <i class="fa fa-google"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#"> <i class="fa fa-youtube"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#"> <i class="fa fa fa-pinterest-p"></i> </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="navbar-main">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="navbar-header">
-              <button
-                type="button"
-                class="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar"
-                aria-expanded="false"
-                aria-controls="navbar"
-              >
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <!-- <a class="navbar-brand" href="index.html"
-                ><img src="assets/images/logo-icon.png" alt=""
-              /></a> -->
-              <h1>
-                Sunflower Community <br />
-                Orphan Support
-              </h1>
-            </div>
+<?php
+  include "./header.php";
+?>
 
             <div id="navbar" class="navbar-collapse collapse pull-right">
               <ul class="nav navbar-nav">
-                <li><a class="is-active" href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a class="is-active" href="index.php">HOME</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="gallery.php">GALLERY</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
               </ul>
             </div>
             <!-- /#navbar -->
@@ -133,7 +36,7 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img
-            src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t39.30808-6/275233940_982108269098824_6371389972016691994_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=XvJBpADLdP8AX9bJtuk&_nc_zt=23&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfChEchp3l8TiMgkkmu83GSsF5wsxLPT8cVWPnLzFOJFRg&oe=63CA949C"
+            src="./assets/images/carousel/c1.jpg"
             alt=""
           />
 
@@ -160,7 +63,7 @@
 
         <div class="item">
           <img
-            src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/82800556_525842118058777_5954170122301079552_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=go7THSI9mHEAX81sxAd&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfC0Pqqmapidk6sdg5L-_15Z5qdOim3VIZJcBXOO6D7eWg&oe=63EC81A7"
+            src="./assets/images/carousel/c2.jpg"
             alt=""
           />
 
@@ -187,7 +90,7 @@
 
         <div class="item">
           <img
-            src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/82773137_523786038264385_6123750094165508096_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=gca7ZX0nbzIAX-z7LFX&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfAEn2R7B-YMDsQ8efZUfotB_YdQyR7PkPM-xNe_-UCgpw&oe=63ECB292"
+            src="./assets/images/carousel/c3.jpg"
             alt=""
           />
 
@@ -318,7 +221,7 @@
           <div class="col-md-6">
             <div class="reasons-col animate-onscroll fadeIn">
               <img
-                src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/82827320_525842048058784_2829346715973189632_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9HK5WVZJJ9UAX-dqoeC&_nc_oc=AQksGzmD1kabHHUcJ-S3OWedJp9fbIoD0dylC25rlB0OIF7cCmG4lLGQgr3tefQv_7I&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfBHnU5ByeF-LsAxSsiGTRV9vdirn7vM1RK5zu3ioPPDpg&oe=63ECAD13"
+                src="./assets/images/together_1.jpg"
                 alt=""
               />
 
@@ -358,7 +261,7 @@
           <div class="col-md-6">
             <div class="reasons-col animate-onscroll fadeIn">
               <img
-                src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/83400028_521253151851007_2577377473096318976_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=HMC_7H2WbuYAX-CrX1c&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfA2_EOzCslzkQeBZLaqeCBFF2ZfXeGAbAbLURPI4I6srg&oe=63EC9C33"
+                src="./assets/images/love_care.jpg"
                 alt=""
               />
 
@@ -402,7 +305,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="cause">
               <img
-                src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/70677656_433890077253982_5583896404687847424_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=8LIAOzXIQq8AX9-IaHh&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfBeVNHUrKIzlBW9dEcJiPuPm7ZqVLetw5JTQH91YLzqEA&oe=63ECA6A1"
+                src="./assets/images/health_nutrition.jpg"
                 alt=""
                 class="cause-img"
               />
@@ -421,7 +324,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="cause">
               <img
-                src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/83083756_521253265184329_4402640403828834304_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=17_pvbDv7egAX9FQl3-&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfClE08-vjKb3zNF9qSouVyOYiccGtkU7JAW7rRx2TZ4ow&oe=63EC9700"
+                src="./assets/images/educatiion_1.jpg"
                 alt=""
                 class="cause-img"
               />
@@ -443,7 +346,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="cause">
               <img
-                src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/82939221_521253415184314_33072429295206400_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=OZOv8CTc8lQAX8fBion&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfB_W2Xt8v3YDuBVo44z2fktERsKuNpWq0vSBVUde2G3nw&oe=63EC8AD4"
+                src="./assets/images/rights_4.jpg"
                 alt=""
                 class="cause-img"
               />
@@ -462,7 +365,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="cause">
               <img
-                src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/82731644_521253491850973_2359493374148345856_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=nCHMCGySfJAAX8N7fXq&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfBobIJjRiKB0ZFZO7IjeTM_W0ECk5CLkUR2aqnCL8Td2Q&oe=63EC9249"
+                src="./assets/images/rights.jpg"
                 alt=""
                 class="cause-img"
               />
@@ -482,132 +385,9 @@
     </div>
     <!-- /.our-causes -->
 
-    <div class="section-home our-sponsors animate-onscroll fadeIn">
-      <div class="container">
-        <h2 class="title-style-1">
-          Our Sponsors <span class="title-under"></span>
-        </h2>
-
-        <ul class="owl-carousel list-unstyled list-sponsors">
-          <li><img src="assets/images/sponsors/bus.png" alt="" /></li>
-          <li><img src="assets/images/sponsors/wikimedia.png" alt="" /></li>
-          <li><img src="assets/images/sponsors/one-world.png" alt="" /></li>
-          <li><img src="assets/images/sponsors/wikiversity.png" alt="" /></li>
-          <li>
-            <img src="assets/images/sponsors/united-nations.png" alt="" />
-          </li>
-
-          <li><img src="assets/images/sponsors/bus.png" alt="" /></li>
-          <li><img src="assets/images/sponsors/wikimedia.png" alt="" /></li>
-          <li><img src="assets/images/sponsors/one-world.png" alt="" /></li>
-          <li><img src="assets/images/sponsors/wikiversity.png" alt="" /></li>
-          <li>
-            <img src="assets/images/sponsors/united-nations.png" alt="" />
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- /.our-sponsors -->
-
-    <footer class="main-footer">
-      <div class="footer-main">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="footer-col">
-                <h4 class="footer-title">
-                  About us <span class="title-under"></span>
-                </h4>
-
-                <div class="footer-content">
-                  <p>
-                    Welcome to
-                    <strong>Sunflower Community Orphans Support</strong>
-                    , where we are dedicated to improving the lives of orphaned
-                    children in Kenya. Our mission is to provide essential
-                    support and resources to these vulnerable children, helping
-                    them to grow and thrive in a safe and nurturing environment.
-                  </p>
-
-                  <p>
-                    We believe that every child deserves the opportunity to
-                    reach their full potential, and we are committed to making
-                    that a reality for the children in our care.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="footer-col">
-                <h4 class="footer-title">
-                  Facebook Comments <span class="title-under"></span>
-                </h4>
-
-                <div class="footer-content">
-                  <ul class="tweets list-unstyled">
-                    <li class="tweet">
-                      I love the emphasis on equality and empowerment for the
-                      orphans that this organization supports. It's clear that
-                      they not only provide necessary resources but also work to
-                      break the cycle of poverty and discrimination that so
-                      often plagues orphaned children.
-                    </li>
-
-                    <li class="tweet">
-                      I am so impressed with the comprehensive approach that
-                      this organization takes in supporting orphans. From
-                      healthcare and nutrition to education and human rights,
-                      it's clear that they are dedicated to ensuring that these
-                      vulnerable children have the best possible chance at
-                      success.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="footer-col">
-                <h4 class="footer-title">
-                  Our Social Media <span class="title-under"></span>
-                </h4>
-
-                <div class="footer-content">
-                  <ul class="list-unstyled list-inline header-social">
-                    <li>
-                      <a href="#"> <i class="fa fa-facebook"></i> </a>
-                    </li>
-                    <li>
-                      <a href="#"> <i class="fa fa-twitter"></i> </a>
-                    </li>
-                    <li>
-                      <a href="#"> <i class="fa fa-google"></i> </a>
-                    </li>
-                    <li>
-                      <a href="#"> <i class="fa fa-youtube"></i> </a>
-                    </li>
-                    <li>
-                      <a href="#"> <i class="fa fa fa-pinterest-p"></i> </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="container text-center">
-          SunflowerCommunityOrphanSupport @ copyrights 2022 - by
-          <a href="www.linkedin.com/in/mourice-adero" target="_blank"
-            >Mourice_A</a
-          >
-        </div>
-      </div>
-    </footer>
+    <?php
+      include "./footer.php";
+    ?>
     <!-- main-footer -->
 
     <!-- Donate Modal -->

@@ -1,7 +1,7 @@
 body {
   font-family: "Open sans", sans-serif;
   /* color: #115c9b; */
-  background: linear-gradient(90deg, #fdb713ad, #8b5e3c9a);
+  background: linear-gradient(90deg, #c0ab7bad, #af9a899a);
 }
 
 h1,
@@ -360,7 +360,7 @@ btn-
 ================================= */
 
 .main-footer {
-  background: #e3bb1c;
+  background: #e3bb1cb2;
   color: #333;
 }
 .main-footer .footer-main {
@@ -463,7 +463,7 @@ btn-
 ================================= */
 .page-heading {
   background-color: #8b5e3c;
-  background: url(https://scontent.fnbo13-1.fna.fbcdn.net/v/t39.30808-6/308979490_430027232590931_3819109414498226432_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=PCMoxsvhbbsAX_0H9Is&_nc_zt=23&_nc_ht=scontent.fnbo13-1.fna&oh=00_AfAiQoOl15HkqGN8tc9h50Pgq-cE6156bcSkOWWrRH4t1w&oe=63CAC88A);
+  background-image: url(../images/heading_1.jpg);
   background-size: cover;
   width: 100%;
   background-repeat: no-repeat;

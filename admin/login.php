@@ -1,5 +1,11 @@
 <?php
 include "./config.php";
+if (isset($_GET['logout'])) {
+  session_unset();
+  session_destroy();
+  header("Location: ./login.php");
+  exit;
+}
 $emailErr = $passwordErr = "";
 $email = $password = "";
 $login_success = $user_error = $invalid_cridentials = "";
@@ -28,13 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       if (mysqli_num_rows($result) == 1) {
         $user = mysqli_fetch_assoc($result);
-        if (password_verify($password, $user['password'])) {
+        if ($password = $user['password']) {
           session_start();
           $_SESSION['user'] = $user;
-          if(isset($_POST['remember']) && $_POST['remember'] == "1"){
+          if (isset($_POST['remember']) && $_POST['remember'] == "1") {
             setcookie("email", $email, time() + (30 * 24 * 60 * 60));
             setcookie("password", $password, time() + (30 * 24 * 60 * 60));
-        }
+          }
           header("Location: index.php");
         } else {
           $invalid_cridentials = "Incorrect password!";
