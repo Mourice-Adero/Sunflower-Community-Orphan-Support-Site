@@ -43,32 +43,11 @@
                 <ul class="list-unstyled list-inline header-contact">
                   <li>
                     <i class="fa fa-phone"></i>
-                    <?php
-                      $get_email = "SELECT phone_number FROM phone_contacts";
-                      $eQuery = mysqli_query($conn,$get_email);
-                      if (mysqli_num_rows($eQuery) > 0) {
-                        while ($row = mysqli_fetch_assoc($eQuery)) {
-                          echo "<a href='tel:''>". $row["phone_number"]. " </a>";
-                        }
-                      } else {
-                        echo "<a href='tel:''>+25493842519 </a>";
-                      }
-                      ?>
+                    <a href='tel:'>+25493842519 </a>
                   </li>
                   <li>
                     <i class="fa fa-envelope"></i>
-                    <?php
-                      $get_email = "SELECT email FROM email_contacts";
-                      $eQuery = mysqli_query($conn,$get_email);
-                      if (mysqli_num_rows($eQuery) > 0) {
-                        while ($row = mysqli_fetch_assoc($eQuery)) {
-                          echo"<a href='". $row["email"] . "'
-                          >". $row["email"] . " </a>";
-                        }
-                      } else {
-                        echo "cokendo2000@gmail.com";
-                      }
-                      ?>
+                      <a href="mailto:cokendo2000@gmail.com">cokendo2000@gmail.com</a>
                   </li>
                 </ul>
               </div>

@@ -9,14 +9,14 @@ include "./header.php";
     <li><a href="contact.php">CONTACT</a></li>
   </ul>
 </div>
-<!-- /#navbar -->
+
 </div>
-<!-- /.container -->
+
 </div>
-<!-- /.navbar-main -->
+
 </nav>
 </header>
-<!-- /. main-header -->
+
 
 <div class="page-heading text-center">
   <div class="page-heading-overlay"></div>
@@ -47,7 +47,7 @@ include "./header.php";
           <span class="hover-caption">Listening Session</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
 
       <a href="#" class="col-md-3 col-sm-4 gallery-item lightbox">
 
@@ -57,7 +57,7 @@ include "./header.php";
           <span class="hover-caption">Project building</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
 
 
       <a href="#" class="col-md-3 col-sm-4 gallery-item lightbox">
@@ -68,7 +68,7 @@ include "./header.php";
           <span class="hover-caption">Learning</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
       <a href="#" class="col-md-3 col-sm-4 gallery-item lightbox">
 
         <img src="./assets/images/love_care.jpg" alt="gallery-image">
@@ -77,7 +77,7 @@ include "./header.php";
           <span class="hover-caption">Sharing Food</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
       <a href="#" class="col-md-3 col-sm-4 gallery-item lightbox">
 
         <img src="./assets/images/gallery_1.jpg" alt="gallery-image">
@@ -86,7 +86,7 @@ include "./header.php";
           <span class="hover-caption">Classroom</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
 
       <a href="#" class="col-md-3 col-sm-4 gallery-item lightbox">
 
@@ -96,7 +96,7 @@ include "./header.php";
           <span class="hover-caption">Food</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
       <a href="#" class="col-md-3 col-sm-4 gallery-item lightbox">
 
         <img src="./assets/images/rights.jpg" alt="gallery-image">
@@ -105,7 +105,7 @@ include "./header.php";
           <span class="hover-caption">Togetherness</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
       <a href="#" class="col-md-3 col-sm-4 gallery-item lightbox">
 
         <img src="./assets/images/rights_4.jpg" alt="gallery-image">
@@ -114,35 +114,24 @@ include "./header.php";
           <span class="hover-caption">Sharing</span>
         </span>
 
-      </a> <!-- /.gallery-item -->
+      </a>
     </div>
 
   </div>
 
-
-</div> <!-- /.main-container  -->
+</div>
 
 <?php
-  include "./footer.php";
+include "./footer.php";
 ?>
-<!-- main-footer -->
 
-
-
-
-
-
-
-<!-- jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
   window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')
 </script>
 
-<!-- Bootsrap javascript file -->
 <script src="assets/js/bootstrap.min.js"></script>
 
-<!-- PrettyPhoto javascript file -->
 <script src="assets/js/jquery.prettyPhoto.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

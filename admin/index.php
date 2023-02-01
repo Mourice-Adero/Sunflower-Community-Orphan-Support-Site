@@ -21,17 +21,16 @@ $first_name = $row['first_name'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunflower Community Admin Dashboard</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../assets/css/adminstyles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.12.6/dist/umd/popper.min.js" integrity="sha384-ZQi/6v4cATVuE6vbX7VU5S5U5V5U5vz8Z1g/4g4a4V7KjmvXyV7N/P5eB/0/0Rv" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <script src="../assets/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../assets/css/adminstyles.css" />
 </head>
 
 <body>
@@ -130,9 +129,6 @@ $first_name = $row['first_name'];
           <li class="nav-item pb-3">
             <a class="nav-link" data-toggle="tab" href="#messages"><i class="fa fa-commenting px-2" aria-hidden="true"></i>
               Messages</a>
-          </li>
-          <li class="nav-item pb-3">
-            <a class="nav-link" data-toggle="tab" href="#contacts"><i class="fa fa-phone px-2" aria-hidden="true"></i> Contacts</a>
           </li>
         </ul>
       </div>
@@ -274,219 +270,6 @@ $first_name = $row['first_name'];
                   ?>
                 </tbody>
               </table>
-            </div>
-          </div>
-          <div class="tab-pane" id="contacts">
-            <div class="content-head d-flex justify-content-between mx-3" id="messages-content">
-              <h3>Contacts</h3>
-            </div>
-            <div class="content-data">
-              <div class="container">
-                <div class="row d-flex">
-                  <div class=" d-flex flex-wrap gap-2 gap-lg-3 my-3">
-                    <div class="my-3 contact_grid p-3">
-                      <h6 class="d-flex"><i class="fa fa-location-arrow mx-1" aria-hidden="true"></i> Location</h6>
-                      <table class="table table-respinsive">
-                        <thead>
-                          <th>Location</th>
-                          <th>Update</th>
-                        </thead>
-                        <tbody>
-                          <?php
-                          if (isset($_POST['location_id']) && isset($_POST['location_name'])) {
-                            $location_id = $_POST['location_id'];
-                            $location_name = $_POST['location_name'];
-                            $sql = "UPDATE location SET location_name='$location_name' WHERE location_id=$location_id";
-                            $result = mysqli_query($conn, $sql);
-                            if ($result) {
-                              echo "<p class='m-2 text-success'>Location updated successfully!</p>";
-                            } else {
-                              echo "<p class='m-2 text-danger'>Error updating location: " . mysqli_error($conn) . "</p>";
-                            }
-                          }
-
-                          $sql = "SELECT * FROM location";
-                          $result = mysqli_query($conn, $sql);
-                          if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                              echo '<tr>
-  <td>' . $row["location_name"] . '</td>
-  <td>
-    <button type="button" class="btn btn-success btn-sm m-1" data-toggle="modal" data-target="#updateModal' . $row["location_id"] . '">Update</button>
-    <div class="modal fade" id="updateModal' . $row["location_id"] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Update Location</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="locationName" class="col-form-label">Location Name:</label>
-                <input type="text" class="form-control" id="locationName' . $row["location_id"] . '" value="' . $row["location_name"] . '">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" onclick="updateLocation(' . $row["location_id"] . ')">Save Changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </td>
-  </tr>';
-                            }
-                          } else {
-                            echo "<p class='m-2'>Location is not provided yet</p>";
-                          }
-                          // mysqli_close($conn);
-                          ?>
-
-                        </tbody>
-                      </table>
-                      <script>
-                        function updateLocation(id) {
-                          var locationName = $("#locationName" + id).val();
-                          $.ajax({
-                            type: "POST",
-                            url: "update_location.php",
-                            data: {
-                              location_id: id,
-                              location_name: locationName
-                            },
-                            success: function(data) {
-                              location.reload();
-                            }
-                          });
-                        }
-                      </script>
-                      <!-- Modal for updating location -->
-                      <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Update Location</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                                <div class="form-group">
-                                  <label for="locationName" class="col-form-label">Location Name:</label>
-                                  <input type="text" class="form-control" id="locationName">
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary" name="save_changes">Save Changes</button>
-                              </form>
-                              <?Php if (isset($_POST["save_changes"])) {
-                                $sql = "UPDATE locations SET location_name = '$location_name' WHERE location_id = '$location_id'";
-                                if (mysqli_query($conn, $sql)) {
-                                  echo "Location updated successfully";
-                                } else {
-                                  echo "Error updating location: " . mysqli_error($conn);
-                                }
-                              } ?>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <script>
-                        $("#saveChanges").click(function() {
-                          updateLocation();
-                        });
-
-                        function updateLocation() {
-                          var locationName = $("#locationName").val();
-                          var locationId = $("#locationId").val();
-
-                          $.ajax({
-                            type: "POST",
-                            url: "./update_location.php",
-                            data: {
-                              update_location: 1,
-                              location_id: locationId,
-                              location_name: locationName
-                            },
-                            success: function(data) {
-                              // code for updating location
-                              $("#locationName" + locationId).text(locationName);
-                              $("#updateModal").modal("hide");
-                            }
-                          });
-                        }
-                      </script>
-
-                    </div>
-                    <div class="my-3 contact_grid p-3">
-                      <h6 class="d-flex"> <i class="fa fa-phone mx-1" aria-hidden="true"></i> Contacts</h6>
-                      <table class="table table-respinsive">
-                        <thead>
-                          <th>Phone</th>
-                          <th>Update</th>
-                        </thead>
-                        <tbody>
-                          <?php
-                          $sql = "SELECT * FROM phone_contacts";
-                          $result = mysqli_query($conn, $sql);
-                          if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                              echo '<tr>
-                              <td>' . $row["phone_number"] . '</td>
-                              <td><button name="update_phone" class="btn btn-success btn-sm m-1">Update</button>
-                              </td>
-                              </tr>';
-                            }
-                          } else {
-                            echo "<p class='m-2'>Delfault phone: +254712345678</p>";
-                          }
-                          // mysqli_close($conn);
-                          ?>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="my-3 contact_grid p-3">
-                      <h6 class="d-flex"> <i class="fas fa-mail-bulk mx-1"></i> Email</h6>
-                      <table class="table table-responsive">
-                        <thead>
-                          <th>Email</th>
-                          <th>Update</th>
-                        </thead>
-                        <tbody>
-                          <?php
-                          $sql = "SELECT * FROM email_contacts";
-                          $result = mysqli_query($conn, $sql);
-
-                          if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                              echo '<tr>
-                    <td>' . $row["email"] . '</td>
-                    <td><button class="btn btn-success btn-sm m-1">Update</button>
-                    <button class="btn btn-danger btn-sm m-1">Delete</button></td>
-                  </tr>';
-                            }
-                          } else {
-                            echo "<p class='m-2'>Delfault email: cokendo2000@gmail.com</p>";
-                          }
-                          // mysqli_close($conn);
-                          ?>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-
             </div>
           </div>
         </div>

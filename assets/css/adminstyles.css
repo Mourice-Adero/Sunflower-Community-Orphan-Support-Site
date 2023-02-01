@@ -151,7 +151,7 @@ form button {
   .sidebar {
     width: 100vw;
     display: block;
-    height: 50vh;
+    height: 50vh !important;
   }
   .right-content {
     width: 100vw;

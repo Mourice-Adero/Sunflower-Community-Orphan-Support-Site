@@ -43,7 +43,7 @@ include "./header.php";
         <h2 class="title-style-2">CONTACT FORM <span class="title-under"></span></h2>
 
         <?php
-        // Define error variables
+
         $nameErr = $emailErr = $messageErr = $status_info = "";
 
         if (isset($_POST["send_message"])) {
@@ -51,7 +51,7 @@ include "./header.php";
             $nameErr = "Name is required";
           } else {
             $name = test_input($_POST["name"]);
-            // Check if name only contains letters and whitespace
+
             if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
               $nameErr = "Only letters and white space allowed";
             }
@@ -61,7 +61,7 @@ include "./header.php";
             $emailErr = "Email is required";
           } else {
             $email = test_input($_POST["email"]);
-            // Check if email is well-formed
+
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
               $emailErr = "Invalid email format";
             }
@@ -73,7 +73,7 @@ include "./header.php";
             $message = test_input($_POST["message"]);
           }
 
-          // If no errors, insert into database table
+  
           if (empty($nameErr) && empty($emailErr) && empty($messageErr)) {
             $sql = "INSERT INTO messages (Client_name, client_email, message)
 VALUES (?, ?, ?)";
@@ -90,7 +90,7 @@ VALUES (?, ?, ?)";
           }
         }
 
-        // Function to sanitize input
+
         function test_input($data)
         {
           $data = trim($data);
@@ -135,40 +135,10 @@ VALUES (?, ?, ?)";
         <div class="contact-items">
 
           <ul class="list-unstyled contact-items-list">
-            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-map-marker"></i></span><?php
-                      $get_email = "SELECT location_name FROM location";
-                      $eQuery = mysqli_query($conn,$get_email);
-                      if (mysqli_num_rows($eQuery) > 0) {
-                        while ($row = mysqli_fetch_assoc($eQuery)) {
-                          echo $row["location_name"] . ". <span></span>";
-                        }
-                      } else {
-                        echo " Kapita, Homabay - Kenya";
-                      }
-                      ?></li>
-            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-phone"></i></span> <?php
-                      $get_email = "SELECT phone_number FROM phone_contacts";
-                      $eQuery = mysqli_query($conn,$get_email);
-                      if (mysqli_num_rows($eQuery) > 0) {
-                        while ($row = mysqli_fetch_assoc($eQuery)) {
-                          echo $row["phone_number"]. ". <span></span>";
-                        }
-                      } else {
-                        echo "+25412345678";
-                      }
-                      ?></li>
+            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-map-marker"></i></span> Kapita, Homabay - Kenya</li>
+            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-phone"></i></span>+25412345678</li>
 
-            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-envelope"></i></span><?php
-                      $get_email = "SELECT email FROM email_contacts";
-                      $eQuery = mysqli_query($conn,$get_email);
-                      if (mysqli_num_rows($eQuery) > 0) {
-                        while ($row = mysqli_fetch_assoc($eQuery)) {
-                          echo $row["email"] . ". <span></span>";
-                        }
-                      } else {
-                        echo "cokendo2000@gmail.com";
-                      }
-                      ?></li>
+            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-envelope"></i></span>cokendo2000@gmail.com</li>
           </ul>
         </div>
 
@@ -176,7 +146,7 @@ VALUES (?, ?, ?)";
 
       </div>
 
-    </div> <!-- /.row -->
+    </div> 
 
 
   </div>
@@ -286,24 +256,14 @@ VALUES (?, ?, ?)";
     </div>
   </div>
 </footer>
-<!-- main-footer -->
 
-
-
-
-
-
-<!-- jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
   window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')
 </script>
 
-<!-- Bootsrap javascript file -->
 <script src="assets/js/bootstrap.min.js"></script>
 
-
-<!-- Google map  -->
 <script src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
 <script src="assets/js/main.js"></script>
 </body>

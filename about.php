@@ -9,14 +9,14 @@
                 <li><a href="contact.php">CONTACT</a></li>
               </ul>
             </div>
-            <!-- /#navbar -->
+
           </div>
-          <!-- /.container -->
+
         </div>
-        <!-- /.navbar-main -->
+
       </nav>
     </header>
-    <!-- /. main-header -->
+
 
     <div class="page-heading text-center">
       <div class="page-heading-overlay"></div>
@@ -80,18 +80,15 @@
             </p>
           </div>
         </div>
-        <!-- /.row -->
+
       </div>
-      <!-- /.about-us -->
 
     </div>
 
     <?php
       include "./footer.php";
     ?>
-    <!-- main-footer -->
 
-    <!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
       window.jQuery ||
@@ -100,7 +97,6 @@
         );
     </script>
 
-    <!-- Bootsrap javascript file -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
