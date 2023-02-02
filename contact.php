@@ -251,7 +251,9 @@ VALUES (?, ?, ?)";
 
   <div class="footer-bottom">
     <div class="container text-center">
-      SunflowerCommunityOrphanSupport @ copyrights 2022
+      SunflowerCommunityOrphanSupport @ copyrights   <?php 
+    echo date("Y"); 
+  ?>
     </div>
   </div>
 </footer>
