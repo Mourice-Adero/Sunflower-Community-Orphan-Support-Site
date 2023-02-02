@@ -6,9 +6,8 @@ if(count($_POST)>0){
 		$first_name=$_POST['first_name'];
 		$email=$_POST['email'];
 		$last_name=$_POST['last_name'];
-		$password=$_POST['password'];
-		$sql = "INSERT INTO `admins`( `first_name`, `email`,`last_name`,`password`) 
-		VALUES ('$first_name','$email','$last_name','$password')";
+		$sql = "INSERT INTO `admins`( `first_name`, `email`,`last_name`) 
+		VALUES ('$first_name','$email','$last_name')";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode"=>200));
 		} 
@@ -24,8 +23,7 @@ if(count($_POST)>0){
 		$first_name=$_POST['first_name'];
 		$email=$_POST['email'];
 		$last_name=$_POST['last_name'];
-		$password=$_POST['password'];
-		$sql = "UPDATE `admins` SET `first_name`='$first_name',`email`='$email',`last_name`='$last_name',`password`='$password' WHERE id=$id";
+		$sql = "UPDATE `admins` SET `first_name`='$first_name',`email`='$email',`last_name`='$last_name' WHERE id=$id";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode"=>200));
 		} 

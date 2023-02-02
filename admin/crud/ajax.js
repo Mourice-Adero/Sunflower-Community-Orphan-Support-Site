@@ -23,19 +23,14 @@
 		var first_name=$(this).attr("data-first-name");
 		var last_name=$(this).attr("data-last-name");
 		var email=$(this).attr("data-email");
-		var password=$(this).attr("data-password");
 		$('#id_u').val(id);
 		$('#first_name_u').val(first_name);
 		$('#last_name_u').val(last_name);
 		$('#email_u').val(email);
-		$('#password_u').val(password);
 	});
 	
 	$(document).on('click','#update',function(e) {
-		var password = $('#password_u').val();
-		var encryptedPassword = crypto.subtle.digest("SHA-256", new TextEncoder().encode(password));
 		var data = $("#update_form").serialize();
-		data = data.replace("password_u=" + password, "password_u=" + encryptedPassword);
 		$.ajax({
 			data: data,
 			type: "post",

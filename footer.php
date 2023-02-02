@@ -65,7 +65,7 @@
                 <div class="footer-content">
                   <ul class="list-unstyled list-inline header-social">
                     <li>
-                      <a href="#"> <i class="fa fa-facebook"></i> </a>
+                      <a href="https://web.facebook.com/sunflowercommunityorphanssupportproject"> <i class="fa fa-facebook"></i> </a>
                     </li>
                     <li>
                       <a href="#"> <i class="fa fa-twitter"></i> </a>
@@ -90,10 +90,7 @@
 
       <div class="footer-bottom">
         <div class="container text-center d-flex justify-content-space-between">
-          SunflowerCommunityOrphanSupport @ copyrights 2022 
-          <a href="https://www.linkedin.com/in/mourice-adero" target="_blank" style="color: #e3bb1c; font-size:small;"
-            >- by Mourice_A</a
-          >
+          SunflowerCommunityOrphanSupport @ copyrights 2022
         </div>
       </div>
     </footer>

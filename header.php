@@ -43,11 +43,11 @@
                 <ul class="list-unstyled list-inline header-contact">
                   <li>
                     <i class="fa fa-phone"></i>
-                    <a href='tel:'>+25493842519 </a>
+                    <a href='tel:'>+254791085576</a>
                   </li>
                   <li>
                     <i class="fa fa-envelope"></i>
-                      <a href="mailto:cokendo2000@gmail.com">cokendo2000@gmail.com</a>
+                      <a href="mailto:cokendo2000@gmail.com">orphanssunflower@gmail.com</a>
                   </li>
                 </ul>
               </div>
@@ -55,7 +55,7 @@
               <div class="col-sm-6 col-xs-12 text-right">
                 <ul class="list-unstyled list-inline header-social">
                   <li>
-                    <a href="#"> <i class="fa fa-facebook"></i> </a>
+                    <a href="https://web.facebook.com/sunflowercommunityorphanssupportproject"> <i class="fa fa-facebook"></i> </a>
                   </li>
                   <li>
                     <a href="#"> <i class="fa fa-twitter"></i> </a>

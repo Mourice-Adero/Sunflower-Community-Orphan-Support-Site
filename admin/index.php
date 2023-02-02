@@ -266,7 +266,6 @@ $first_name = $row['first_name'];
                   } else {
                     echo "<p class='m-2'>There are no available</p>";
                   }
-                  // mysqli_close($conn);
                   ?>
                 </tbody>
               </table>

@@ -15,13 +15,14 @@ if (!isset($_SESSION['user'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Admin Data</title>
-	<link rel="stylesheet" href="https:
-	<link rel=" stylesheet" href="https:
-	<link rel=" stylesheet" href="https:
-	<link rel=" stylesheet" href="https:
-	<link rel=" stylesheet" href="../../assets/css/adminstyles.css">
-	<script src="https:
-	<script src=" https: <script src="ajax/ajax.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../../assets/css/adminstyles.css">
+	<script src="ajax/ajax.js"></script>
 </head>
 
 <body>
@@ -54,7 +55,6 @@ if (!isset($_SESSION['user'])) {
 						<th>FIRST NAME</th>
 						<th>LAST NAME</th>
 						<th>EMAIL</th>
-						<th>PASSWORD</th>
 						<th>ACTION</th>
 					</tr>
 				</thead>
@@ -76,10 +76,9 @@ if (!isset($_SESSION['user'])) {
 							<td><?php echo $row["first_name"]; ?></td>
 							<td><?php echo $row["last_name"]; ?></td>
 							<td><?php echo $row["email"]; ?></td>
-							<td><input type="password" style="border: 0; background: transparent;" value="<?php echo $row["password"]; ?>"></td>
 							<td>
 								<a href="#editAdminModal" class="edit" data-toggle="modal">
-									<i class="material-icons update" data-toggle="tooltip" data-id="<?php echo $row["id"]; ?>" data-first-name="<?php echo $row["first_name"]; ?>" data-last-name="<?php echo $row["last_name"]; ?>" data-email="<?php echo $row["email"]; ?>" data-password="<?php echo $row["password"]; ?>" title="Edit">&#xE254;</i>
+									<i class="material-icons update" data-toggle="tooltip" data-id="<?php echo $row["id"]; ?>" data-first-name="<?php echo $row["first_name"]; ?>" data-last-name="<?php echo $row["last_name"]; ?>" data-email="<?php echo $row["email"]; ?>" title="Edit">&#xE254;</i>
 								</a>
 								<a href="#deleteAdminModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 							</td>
@@ -115,10 +114,6 @@ if (!isset($_SESSION['user'])) {
 							<label>EMAIL</label>
 							<input type="email" id="email" name="email" class="form-control" required>
 						</div>
-						<div class="form-group">
-							<label>PASSWORD</label>
-							<input type="password" id="password" name="password" class="form-control" required>
-						</div>
 					</div>
 					<div class="modal-footer">
 						<input type="hidden" value="1" name="type">
@@ -151,10 +146,6 @@ if (!isset($_SESSION['user'])) {
 						<div class="form-group">
 							<label>Email</label>
 							<input type="email" id="email_u" name="email" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Password</label>
-							<input type="password" id="password_u" name="password" class="form-control" required>
 						</div>
 					</div>
 					<div class="modal-footer">

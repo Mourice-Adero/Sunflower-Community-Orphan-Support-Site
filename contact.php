@@ -136,9 +136,9 @@ VALUES (?, ?, ?)";
 
           <ul class="list-unstyled contact-items-list">
             <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-map-marker"></i></span> Kapita, Homabay - Kenya</li>
-            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-phone"></i></span>+25412345678</li>
+            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-phone"></i></span>+254791085576</li>
 
-            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-envelope"></i></span>cokendo2000@gmail.com</li>
+            <li class="contact-item"> <span class="contact-icon"> <i class="fa fa-envelope"></i></span>orphanssunflower@gmail.com</li>
           </ul>
         </div>
 
@@ -226,7 +226,7 @@ VALUES (?, ?, ?)";
             <div class="footer-content">
               <ul class="list-unstyled list-inline header-social">
                 <li>
-                  <a href="#"> <i class="fa fa-facebook"></i> </a>
+                  <a href="https://web.facebook.com/sunflowercommunityorphanssupportproject"> <i class="fa fa-facebook"></i> </a>
                 </li>
                 <li>
                   <a href="#"> <i class="fa fa-twitter"></i> </a>
@@ -251,8 +251,7 @@ VALUES (?, ?, ?)";
 
   <div class="footer-bottom">
     <div class="container text-center">
-      SunflowerCommunityOrphanSupport @ copyrights 2022 - by
-      <a href="www.linkedin.com/in/mourice-adero" target="_blank">Mourice_A</a>
+      SunflowerCommunityOrphanSupport @ copyrights 2022
     </div>
   </div>
 </footer>

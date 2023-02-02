@@ -23,12 +23,10 @@
 		var first_name=$(this).attr("data-first-name");
 		var email=$(this).attr("data-email");
 		var last_name=$(this).attr("data-last-name");
-		var password=$(this).attr("data-password");
 		$('#id_u').val(id);
 		$('#first_name_u').val(first_name);
 		$('#email_u').val(email);
 		$('#last_name_u').val(last_name);
-		$('#password_u').val(password);
 	});
 	// Update
 	$(document).on('click','#update',function(e) {
