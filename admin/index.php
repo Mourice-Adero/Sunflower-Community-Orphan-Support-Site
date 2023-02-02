@@ -40,85 +40,11 @@ $first_name = $row['first_name'];
         <div class="navbar-toggler m-3 p-2 h1 d-lg-none border position-absolute end-2 top-0" data-bs-toggle="collapse" data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
-        <?php
-        if (isset($_POST['submit'])) {
-          $target_dir = "./images/";
-          $target_file = $target_dir . $first_name . "_avatar.jpg";
-          $upload_ok = 1;
-          $image_file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-          $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-          if ($check !== false) {
-            $upload_ok = 1;
-          } else {
-            echo "File is not an image.";
-            $upload_ok = 0;
-          }
-          if ($_FILES["fileToUpload"]["size"] > 500000) {
-            echo "Sorry, your file is too large.";
-            $upload_ok = 0;
-          }
-
-          if (
-            $image_file_type != "jpg" &&
-            $image_file_type != "jpeg" &&
-            $image_file_type != "png" &&
-            $image_file_type != "gif"
-          ) {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-            $upload_ok = 0;
-          }
-
-          if ($upload_ok == 0) {
-            echo "Sorry, your file was not uploaded.";
-          } else {
-            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-              echo "The file " . $first_name . "_avatar.jpg" . " has been uploaded.";
-            } else {
-              echo "Sorry, there was an error uploading your file.";
-            }
-          }
-        }
-        ?>
         <div class="admin-details d-flex flex-column justify-content-center pt-3 text-center">
-          <img src="./images/<?php echo $first_name; ?>_avatar.jpg" class="rounded-circle image-fluid image-thumbnail m-auto" style="height: 100px" alt="Admin Avatar" />
+          <img src="./images/admin_avatar.jpg" class="rounded-circle image-fluid image-thumbnail m-auto" style="height: 70px" alt="Admin Avatar" />
           <h4 class="m-2 admin-name"><?php echo $first_name; ?></h4>
-          <form action="" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
-          </form>
         </div>
 
-        <script>
-          $(document).ready(function() {
-            $('.admin-details form').hide();
-
-            $('.admin-name').append('<i class="fas fa-edit edit-icon"></i>');
-
-            $('.edit-icon').click(function() {
-              $('.admin-details form').toggle();
-            });
-
-            $('form').submit(function(e) {
-              e.preventDefault();
-              let formData = new FormData(this);
-
-              $.ajax({
-                type: 'POST',
-                url: 'upload.php',
-                data: formData,
-                success: function(data) {
-                  $('.admin-details form').hide();
-                  $('.admin-details img').attr('src', `./images/${data}_avatar.jpg`);
-                  $('.admin-name').text(data);
-                },
-                cache: false,
-                contentType: false,
-                processData: false
-              });
-            });
-          });
-        </script>
         <hr class="hr" />
         <h3 class="my-4 text-center">Dashboard</h3>
         <hr class="hr" />
@@ -141,7 +67,7 @@ $first_name = $row['first_name'];
             Sunflower Community Orphan Support
           </h2>
           <div class="profile-container d-flex align-items-center" style="background-color: rgb(69, 158, 69)">
-            <img src="./images/<?php echo $first_name; ?>_avatar.jpg" class="rounded-circle image-fluid image-thumbnail m-auto m-1" style="height: 50px" alt="Admin Avatar" />
+            <img src="./images/admin_avatar.jpg" class="rounded-circle image-fluid image-thumbnail m-auto m-1" style="height: 50px" alt="Admin Avatar" />
             <button class="btn btn-outline-secondary btn-custom d-none d-sm-inline-block text-dark mx-2" onclick="window.location.href = './login.php?logout=true'">
               Log Out
             </button>
