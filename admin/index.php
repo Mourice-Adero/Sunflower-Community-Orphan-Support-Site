@@ -126,7 +126,7 @@ $first_name = $row['first_name'];
               <a href="./register.php" class="p-2 mb-1 table-btn">Register Admin</a>
             </div>
             <div class="content-data">
-              <table class="table p-3 mx-2 mx-auto" style="background: rgba(0, 0, 0, 0.171) !important; width: 95%">
+              <table class="table p-3 mx-2 mx-auto" style="background: rgba(0, 0, 0, 0.171) !important; display: block; overflow-x: auto; width: 95%">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -190,7 +190,7 @@ $first_name = $row['first_name'];
                   </tr>';
                     }
                   } else {
-                    echo "<p class='m-2'>There are no available</p>";
+                    echo "<p class='m-2'>No messages available</p>";
                   }
                   ?>
                 </tbody>

@@ -125,10 +125,7 @@ function test_input($data)
             <div class="d-flex"><input class="p-2 m-1 w-auto" type="checkbox" name="remember" id="remember" value="1" <?php if (isset($remember_me)) echo "checked"; ?>>
               <label class="p-2 m-1" for="remember_me">Remember me</label>
             </div>
-            <button type="submit" name="login" class="rounded p-2">Login</button>
-            <div class="d-flex gap-2 mt-2">
-              <p>Don't have an account? </p> <a href="./register.php" id="register">Register Here</a>
-            </div>
+            <button type="submit" name="login" class="rounded p-2 mb-3">Login</button>
           </form>
           <div class="social-media m-auto d-lg-none mb-3">
             <ul class="list-unstyled d-flex gap-4 my-auto">
